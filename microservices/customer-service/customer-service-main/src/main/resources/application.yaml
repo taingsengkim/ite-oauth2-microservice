@@ -1,2 +1,11 @@
 server:
   port: 9091
+
+spring:
+  mongodb:
+    host: localhost
+    port: 2026
+    username: mongod
+    database: db_customer
+    authentication-database: admin
+    password: mongod
