@@ -5,6 +5,13 @@ plugins {
 
 dependencies {
 
+    implementation 'org.liquibase:liquibase-core'
+    implementation 'org.springframework.boot:spring-boot-starter-liquibase'
+    runtimeOnly 'org.postgresql:postgresql'
+    runtimeOnly 'org.postgresql:r2dbc-postgresql'
+
+    implementation 'org.springframework.cloud:spring-cloud-starter-consul-config'
+
     implementation 'kh.edu.istad:order-domain-core'
     implementation 'kh.edu.istad:order-service-client'
     implementation 'kh.edu.istad:order-application-service'
