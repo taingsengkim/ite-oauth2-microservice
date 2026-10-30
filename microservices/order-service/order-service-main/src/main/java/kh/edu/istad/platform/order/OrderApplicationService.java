@@ -3,9 +3,11 @@ package kh.edu.istad.platform.order;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
 
 @EnableConfigurationProperties
-@SpringBootApplication
+@EnableR2dbcRepositories(basePackages = "kh.edu.istad.platform.order.persistence")
+@SpringBootApplication(scanBasePackages = "kh.edu.istad.platform.order.persistence")
 public class OrderApplicationService {
 
     static void main(String[] args) {
