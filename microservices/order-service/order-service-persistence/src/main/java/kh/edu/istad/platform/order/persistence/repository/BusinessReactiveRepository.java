@@ -5,6 +5,5 @@ import kh.edu.istad.platform.order.persistence.entity.BusinessEntityId;
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
 public interface BusinessReactiveRepository extends R2dbcRepository<BusinessEntity, BusinessEntityId> {
 }
