@@ -8,3 +8,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-webflux-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
+
+bootJar {
+    enabled = false
+}
