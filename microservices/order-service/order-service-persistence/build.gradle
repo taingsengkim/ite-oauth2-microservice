@@ -1,17 +1,8 @@
 plugins {
-    id 'spring-common-conventions'
+    alias(libs.plugins.spring.common.conventions)
 }
 
 dependencies {
-    implementation 'kh.edu.istad:order-application-service'
-    api 'org.springframework.boot:spring-boot-starter-data-r2dbc'
-
-    testImplementation 'org.springframework.boot:spring-boot-starter-data-r2dbc-test'
-    testImplementation 'io.projectreactor:reactor-test'
-
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-}
-
-tasks.withType(Test).configureEach {
-    useJUnitPlatform()
+    api libs.order.application.service
+    api libs.spring.boot.starter.data.r2dbc
 }

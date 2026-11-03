@@ -1,5 +1,6 @@
 package kh.edu.istad.platform.customer.restapi.controller;
 
+import kh.edu.istad.common.domain.exception.DomainException;
 import kh.edu.istad.common.domain.valueobject.Money;
 import kh.edu.istad.platform.customer.domain.dto.InitiateCustomerResult;
 import kh.edu.istad.platform.customer.domain.entity.Customer;
@@ -28,7 +29,7 @@ public class CustomerController {
 
     @GetMapping
     public Flux<Customer> findAll(){
-        return queryCustomerUseCase.findAll();
+        throw new DomainException("Menghor good boy");
     }
 
     @GetMapping("/query")
